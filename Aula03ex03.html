@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimento 30%</title>
+</head>
+    <script>
+        function CalcularRendimento(){
+
+            var valorInvestimento = parseFloat(document.getElementById("valorInvestimento").value);
+
+            var Rendimento = valorInvestimento * 0.3;
+
+            document.getElementById("resultado").innerHTML = "O rendimento do investimento é: "+ Rendimento.toFixed(2);
+
+        }
+
+    </script>
+
+<body>
+
+    <h1>Calcular Valor Investido 30%</h1>
+    <label for = valorInvestimento >Insira aqui o Valor a ser investido: </label>
+    <input type="number" id = "valorInvestimento" step="0.01" min = "0">
+    <button onclick="CalcularRendimento()">Calcular Rendimento</button>
+    <p id = "resultado"></p>
+
+</body>
+</html>

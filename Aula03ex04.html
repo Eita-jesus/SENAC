@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function calcularAumento(){
+            
+            var calcularAumentoSalarial = parseFloat(document.getElementById("salario").value);
+
+            var salarioajustado = calcularAumentoSalarial * 0.15;
+
+            var salarioNovo = salarioajustado + calcularAumentoSalarial;
+
+            document.getElementById("salarioajustado").innerHTML = "O salário ajustado é de:"+salarioNovo.toFixed(2);
+
+        }
+
+    </script>
+
+
+<body>
+
+    <h1>Aumento Salarial</h1>
+    <label for = "salario" >Insira o valor do salário atual:</label>
+    <input type="number" id = "salario" step="0.01" min="0">
+    <button onclick="calcularAumento()">Calcular salário</button>
+    <p id = "salarioajustado"></p>
+
+
+
+    
+</body>
+</html>
